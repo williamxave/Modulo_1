@@ -6,14 +6,14 @@ public class main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        var limitePassageiro = 2;
+
         var vezes = 0;
         var ir = false;
         var pessoas = 0;
         var resto = 0;
 
         System.out.print("Digite o limite de passageiros: ");
-         limitePassageiro = sc.nextInt();
+         var limitePassageiro = sc.nextInt();
         if (limitePassageiro < 2 || limitePassageiro > 100) {
             throw new IllegalStateException("Digite uma capacidade valida");
         }
