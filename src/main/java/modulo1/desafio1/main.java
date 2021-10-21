@@ -13,18 +13,25 @@ public class main {
         var resto = 0;
 
         System.out.print("Digite o limite de passageiros: ");
-         var limitePassageiro = sc.nextInt();
-        if (limitePassageiro < 2 || limitePassageiro > 100) {
-            throw new IllegalStateException("Digite uma capacidade valida");
+       var  limitePassageiro = sc.nextInt();
+        if (limitePassageiro <= 2 || limitePassageiro >= 100) {
+            while(limitePassageiro <= 2 || limitePassageiro >= 100){
+                System.out.print("Digite um limite de passageiros válido: ");
+                limitePassageiro = sc.nextInt();
+            }
         }
+
         System.out.println("");
 
         System.out.print("Digite o quantos passageiros tem no total: ");
         var totalPassagerios = sc.nextInt();
-
-        if (totalPassagerios < 1 || totalPassagerios > 1000) {
-            throw new IllegalStateException("Digite um valor válido!");
+        if(totalPassagerios <= 1 || totalPassagerios >= 100){
+            while(totalPassagerios <= 2 || totalPassagerios >= 1000 ){
+                System.out.print("Digite uma limite de passageiros válida: ");
+                totalPassagerios = sc.nextInt();
+            }
         }
+
         System.out.println("");
 
         if (limitePassageiro == totalPassagerios || totalPassagerios > limitePassageiro) {
